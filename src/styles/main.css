@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'BebasNeue';
+}
+
+html {
+    font-size: 2em;
+}
+
+.body {
+    background-color: black;
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(../assets/BebasNeue-Regular.ttf);
+}
