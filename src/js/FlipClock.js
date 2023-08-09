@@ -12,6 +12,8 @@ export class FlipClock {
             hours: new HourDigit(this.clock.time.hours),
             minutes: new MinuteDigit(this.clock.time.minutes),
         };
+
+        this.update();
     }
 
     update() {

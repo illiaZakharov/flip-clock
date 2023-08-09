@@ -2,10 +2,6 @@ export class Clock {
     #time;
     #observers = [];
 
-    constructor() {
-        this.updateClock();
-    }
-
     static getInstance() {
         if (!this.instance) {
             this.instance = new Clock();
@@ -23,7 +19,11 @@ export class Clock {
         this.notifyObservers();
     }
 
-    updateClock() {
+    start() {
+        this.updateTime();
+    }
+
+    updateTime() {
         const currentTime = new Date();
         const minutes = currentTime.getMinutes();
 
@@ -34,7 +34,7 @@ export class Clock {
             };
         }
 
-        requestAnimationFrame(this.updateClock.bind(this));
+        requestAnimationFrame(this.updateTime.bind(this));
     }
 
     registerObserver(observer) {
